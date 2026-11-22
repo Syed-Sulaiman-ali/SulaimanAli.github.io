@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page metadata for character encoding and mobile scaling -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Page title and description shown in browser tabs and search results -->
+  <title>Sulaiman Ali — SAP ABAP Consultant (Fresher) | Hyderabad</title>
+  <meta name="description" content="Portfolio of Sulaiman Ali, BCA student (2028) and aspiring SAP ABAP Consultant in Hyderabad. Focused on Open SQL, MODIFY sync programs, ALV reports, and S/4HANA ABAP.">
+
+  <!-- Open Graph tags for clean link previews on LinkedIn and WhatsApp -->
+  <meta property="og:title" content="Sulaiman Ali — SAP ABAP Consultant (Fresher)">
+  <meta property="og:description" content="BCA student and SAP ABAP fresher in Hyderabad practising daily on S/4HANA through SAP GUI. View ABAP projects, skills, and resume.">
+  <meta property="og:type" content="website">
+
+  <!-- Inline SVG favicon: works immediately on GitHub Pages without extra image files -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23090D0E'/%3E%3Crect x='3' y='3' width='58' height='58' rx='10' fill='none' stroke='%2300E5A0' stroke-width='3'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%2300E5A0' font-family='monospace' font-weight='700' font-size='26'%3ESA%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Plus Jakarta Sans for UI text and JetBrains Mono for code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Relative path to the stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Accessibility: lets keyboard users jump straight to the main content -->
+  <a class="skip-link" href="#home">Skip to main content</a>
+
+  <!-- =========================================================
+       STICKY NAVIGATION BAR
+       ========================================================= -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Sulaiman Ali Home">
+        <span class="brand-mark" aria-hidden="true">&gt;_</span>
+        <span>Sulaiman Ali</span>
+      </a>
+
+      <!-- Mobile menu button (hidden on desktop, shown on small screens) -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Main navigation links -->
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         1. HOME / HERO SECTION
+         ========================================================= -->
+    <section id="home" class="hero">
+      <!-- Soft radial glow layer that follows the cursor on desktop -->
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <!-- Left column: quick 30-second recruiter summary -->
+        <div class="hero-copy">
+          <p class="eyebrow">SAP ABAP Consultant (Fresher) &middot; Hyderabad, India</p>
+          <h1>
+            Sulaiman Ali<br>
+            <span class="headline-sub">
+              Building reliable
+              <span class="rotating-word-wrap">
+                <span id="rotating-word" class="rotating-word">SAP ABAP</span>
+              </span>
+              solutions.
+            </span>
+          </h1>
+          <p class="lead">
+            BCA student at RKDF University (graduating 2028) with 3 months of focused
+            SAP ABAP training and daily hands-on practice on an S/4HANA system through SAP GUI.
+          </p>
+
+          <!-- Primary call-to-action buttons -->
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="./assets/Sulaiman Ali Resume.pdf" download>Download Resume</a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <!-- Right column: animated ABAP MODIFY sync code & live output panel -->
+        <div class="abap-panel" aria-label="Animated ABAP MODIFY database synchronization demo">
+          <div class="abap-panel-header">
+            <div class="panel-title">
+              <span class="panel-dot" aria-hidden="true"></span>
+              <span>Z_STUDENT_SYNC.abap &mdash; SAP GUI (S/4HANA)</span>
+            </div>
+            <button id="run-again-btn" class="run-btn" type="button">
+              Run again
+            </button>
+          </div>
+
+          <div class="abap-panel-body">
+            <!-- Typed ABAP code appears here -->
+            <pre class="code-stream"><code id="abap-code-output"></code><span id="typing-cursor" class="cursor" aria-hidden="true"></span></pre>
+
+            <!-- Classification output appears after code finishes typing -->
+            <div class="console-divider">
+              <span>EXECUTION OUTPUT &middot; ZSTUDENT123 (15 RECORDS)</span>
+            </div>
+            <div id="abap-result-output" class="result-stream" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. ABOUT SECTION
+         ========================================================= -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">01 // About</p>
+          <h2>Focused on clean ABAP logic and steady daily practice</h2>
+        </div>
+
+        <div class="about-layout">
+          <!-- Profile photo with graceful initials fallback if assets/profile.jpg is missing -->
+          <div class="profile-frame">
+            <img
+              id="profile-photo"
+              src="./assets/Sulaima photo Profile.jpeg"
+              alt="Portrait of Sulaiman Ali"
+              width="240"
+              height="240"
+              loading="lazy"
+            >
+            <div id="profile-fallback" class="profile-fallback" aria-hidden="true">
+              <span>SA</span>
+              <small>SAP ABAP</small>
+            </div>
+          </div>
+
+          <!-- Bio text kept under ~65 characters per line for readability -->
+          <div class="about-content">
+            <p>
+              I am <strong>Sulaiman Ali</strong>, a BCA student at RKDF University
+              (graduating in 2028) preparing for an off-campus role as an
+              <strong>SAP ABAP Consultant</strong> in Hyderabad, India.
+            </p>
+            <p>
+              After completing a 3-month online ABAP training program with an institute
+              in Hyderabad, I practise daily on an S/4HANA ABAP system through SAP GUI —
+              writing reports, working with the Data Dictionary, and building database
+              update programs with Open SQL and internal tables.
+            </p>
+
+            <!-- Compact fact list (strictly factual, no invented stats) -->
+            <dl class="about-facts">
+              <div>
+                <dt>Education</dt>
+                <dd>BCA, RKDF University (Graduating 2028)</dd>
+              </div>
+              <div>
+                <dt>Training</dt>
+                <dd>3-month online SAP ABAP training (Hyderabad institute)</dd>
+              </div>
+              <div>
+                <dt>Daily Environment</dt>
+                <dd>S/4HANA ABAP system via SAP GUI</dd>
+              </div>
+              <div>
+                <dt>Core Strengths</dt>
+                <dd>Logical thinking, debugging, step-by-step problem solving</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. SKILLS SECTION
+         ========================================================= -->
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">02 // Skills</p>
+          <h2>Technical toolkit</h2>
+        </div>
+
+        <!-- Structured rows instead of repetitive identical rounded cards -->
+        <div class="skills-table">
+          <div class="skill-row">
+            <div class="skill-category">
+              <h3>SAP ABAP Core</h3>
+              <p>Primary focus area</p>
+            </div>
+            <ul class="skill-list">
+              <li>SAP ABAP</li>
+              <li>Open SQL</li>
+              <li>Internal Tables</li>
+              <li>MODIFY Statement</li>
+              <li>Data Dictionary</li>
+              <li>CRUD Operations</li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-category">
+              <h3>Reporting &amp; Data Logic</h3>
+              <p>Output &amp; validation</p>
+            </div>
+            <ul class="skill-list">
+              <li>Classical Reports</li>
+              <li>ALV Reports</li>
+              <li>Database Management</li>
+              <li>Data Comparison</li>
+              <li>Data Classification</li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-category">
+              <h3>Programming &amp; Web</h3>
+              <p>Foundational languages</p>
+            </div>
+            <ul class="skill-list">
+              <li>Basic C++</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Basic JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-category">
+              <h3>Troubleshooting &amp; Approach</h3>
+              <p>System &amp; debugging habits</p>
+            </div>
+            <ul class="skill-list">
+              <li>Windows Troubleshooting</li>
+              <li>Basic Software Troubleshooting</li>
+              <li>Debugging</li>
+              <li>Logical Thinking</li>
+              <li>Step-by-Step Problem Solving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. PROJECTS SECTION
+         ========================================================= -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">03 // Projects</p>
+          <h2>Selected work</h2>
+          <p class="section-intro">
+            Hands-on ABAP programs and troubleshooting work, documented with the problem,
+            approach, and result.
+          </p>
+        </div>
+
+        <div class="projects-stack">
+          <!-- PROJECT 1 -->
+          <article class="project-entry reveal">
+            <div class="project-details">
+              <div class="project-meta">
+                <span class="project-index">01</span>
+                <span class="project-tags">SAP ABAP &middot; Open SQL &middot; Internal Tables</span>
+              </div>
+              <h3>ABAP Database Synchronization Using MODIFY</h3>
+              <p class="project-summary">
+                A synchronization program that uploads 15 records from a file into an internal
+                table, compares them with database table <code>ZSTUDENT123</code>, and classifies
+                every record before updating the database.
+              </p>
+
+              <div class="par-grid">
+                <div>
+                  <h4>Problem</h4>
+                  <p>
+                    Bulk-loading file records directly into a database table can overwrite
+                    unchanged rows or leave no visibility into what was inserted versus updated.
+                  </p>
+                </div>
+                <div>
+                  <h4>Approach</h4>
+                  <p>
+                    Loaded the 15 file records into an internal table, fetched existing entries
+                    from <code>ZSTUDENT123</code> using Open SQL, compared fields row by row,
+                    and applied <code>MODIFY</code> only where needed.
+                  </p>
+                </div>
+                <div>
+                  <h4>Result</h4>
+                  <p>
+                    New records are inserted, modified rows are updated, unchanged rows are
+                    flagged, and each record is clearly classified as <code>NEW</code>,
+                    <code>CHANGED</code>, or <code>NO CHANGE</code>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Code & output snippet for Project 1 -->
+            <div class="snippet-box" aria-label="ABAP MODIFY synchronization snippet">
+              <div class="snippet-label">ABAP Snippet &amp; Sync Status</div>
+              <pre><code>READ TABLE lt_db INTO ls_db
+  WITH KEY student_id = ls_file-student_id.
+
+IF sy-subrc &lt;&gt; 0.
+  ls_log-status = 'NEW'.
+  MODIFY zstudent123 FROM ls_file.
+ELSEIF ls_db &lt;&gt; ls_file.
+  ls_log-status = 'CHANGED'.
+  MODIFY zstudent123 FROM ls_file.
+ELSE.
+  ls_log-status = 'NO CHANGE'.
+ENDIF.</code></pre>
+              <div class="snippet-status-row">
+                <span class="status-pill status-new">NEW</span>
+                <span class="status-pill status-changed">CHANGED</span>
+                <span class="status-pill status-unchanged">NO CHANGE</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="project-entry reveal">
+            <div class="project-details">
+              <div class="project-meta">
+                <span class="project-index">02</span>
+                <span class="project-tags">SAP ABAP &middot; ALV &middot; Data Dictionary</span>
+              </div>
+              <h3>Student ALV Report</h3>
+              <!-- REPLACE THIS PARAGRAPH with 1-2 lines describing what your ALV report shows -->
+              <p class="project-summary">
+                [REPLACE: Add 1–2 lines explaining what your Student ALV Report displays,
+                such as student records fetched from your custom DDIC table, selection filters,
+                or sorting options.]
+              </p>
+
+              <div class="par-grid">
+                <div>
+                  <h4>Problem</h4>
+                  <p>
+                    [REPLACE: Briefly note why a structured ALV view was needed instead of raw
+                    table browsing or a basic classical list.]
+                  </p>
+                </div>
+                <div>
+                  <h4>Approach</h4>
+                  <p>
+                    Defined the underlying Data Dictionary structure and built an ALV report
+                    in ABAP to read student records into an internal table and display them in
+                    an interactive grid.
+                  </p>
+                </div>
+                <div>
+                  <h4>Result</h4>
+                  <p>
+                    [REPLACE: State what the finished ALV output displays for the user, e.g.,
+                    clean columns with sorting and filtering in SAP GUI.]
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sample ALV grid output snippet for Project 2 -->
+            <div class="snippet-box" aria-label="Sample ALV grid output preview">
+              <div class="snippet-label">ALV Grid Output Preview (SAP GUI)</div>
+              <pre><code>| STUDENT_ID | NAME         | COURSE | STATUS  |
+|------------|--------------|--------|---------|
+| STU001     | [Sample Row] | BCA    | ACTIVE  |
+| STU002     | [Sample Row] | BCA    | ACTIVE  |
+| STU003     | [Sample Row] | BCA    | UPDATED |
+
+* Built with Data Dictionary + ALV Grid</code></pre>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="project-entry reveal">
+            <div class="project-details">
+              <div class="project-meta">
+                <span class="project-index">03</span>
+                <span class="project-tags">Windows Troubleshooting &middot; System Recovery</span>
+              </div>
+              <h3>Windows System Recovery and Troubleshooting</h3>
+              <p class="project-summary">
+                Recovered a Windows laptop frozen at the login screen using System Restore,
+                then diagnosed a secondary Google Chrome startup issue that appeared after
+                recovery.
+              </p>
+
+              <div class="par-grid">
+                <div>
+                  <h4>Problem</h4>
+                  <p>
+                    A Windows laptop hung completely at the login screen, blocking normal
+                    desktop access, and later showed a Chrome startup issue after booting.
+                  </p>
+                </div>
+                <div>
+                  <h4>Approach</h4>
+                  <p>
+                    Entered recovery options, selected a valid restore point via System
+                    Restore to roll back system state safely, then isolated the Chrome
+                    startup issue step by step.
+                  </p>
+                </div>
+                <div>
+                  <h4>Result</h4>
+                  <p>
+                    Restored normal Windows login and desktop access without wiping user
+                    data, followed by targeted diagnosis of the post-restore browser issue.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Diagnostic workflow snippet for Project 3 -->
+            <div class="snippet-box" aria-label="Windows troubleshooting steps summary">
+              <div class="snippet-label">Troubleshooting Log</div>
+              <pre><code>[1] Symptom  : Freeze at Windows login screen
+[2] Recovery : Booted into Windows Recovery (WinRE)
+[3] Action   : Applied System Restore -&gt; valid restore point
+[4] Verified : Login restored, desktop accessible
+[5] Follow-up: Investigated Chrome startup issue post-restore</code></pre>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. RESUME SECTION
+         ========================================================= -->
+    <section id="resume" class="section reveal">
+      <div class="container">
+        <div class="resume-band">
+          <div>
+            <p class="section-tag">04 // Resume</p>
+            <h2>Download my resume</h2>
+            <p class="resume-copy">
+              A concise PDF copy of my education, SAP ABAP training, technical skills, and
+              projects — ready to share with hiring teams.
+            </p>
+          </div>
+          <div class="resume-action">
+            <!-- Relative path to the PDF inside the assets folder -->
+            <a class="btn btn-primary" href="./assets/Sulaiman Ali Resume.pdf" download>
+              Download PDF Resume
+            </a>
+            <span class="file-hint">assets/Sulaiman Ali Resume.pdf</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. CONTACT SECTION
+         ========================================================= -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">05 // Contact</p>
+          <h2>Let's connect</h2>
+          <p class="section-intro">
+            Open to off-campus SAP ABAP Consultant (fresher) opportunities in Hyderabad, India.
+            Reach out directly by email or connect on LinkedIn and GitHub.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a class="contact-item" href="mailto:trueshock86@gmail.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">trueshock86@gmail.com</span>
+            <span class="contact-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a
+            class="contact-item"
+            href="https://www.linkedin.com/in/sulaiman-ali-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/sulaiman-ali-profile</span>
+            <span class="contact-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <!-- REPLACE [MY-USERNAME] with your actual GitHub username -->
+          <a
+            class="contact-item"
+            href="https://github.com/[MY-USERNAME]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/[MY-USERNAME]</span>
+            <span class="contact-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER (CENTERED COPYRIGHT)
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="current-year">2026</span> Sulaiman Ali. Built with plain HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Relative path to JavaScript (defer ensures HTML loads first) -->
+  <script src="./script.js" defer></script>
+</body>
+</html>
